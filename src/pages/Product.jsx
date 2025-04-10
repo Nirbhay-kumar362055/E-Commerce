@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useContext , useState} from 'react';
 import { ShopContext } from '../context/ShopContext';
 import { assets } from '../assets/assets';
+import RelatedProduct from '../components/RelatedProduct';
 
 const Product = () => {
   const { productId} = useParams();
@@ -84,8 +85,10 @@ const Product = () => {
             Consectetur, quibusdam ab commodi numquam eligendi inventore! Tempore omnis sint, harum voluptate dolorem fuga nisi, laboriosam repellendus aut animi ex. Ex, laudantium quidem. Quo perferendis eius ea dolore blanditiis numquam.</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam, provident recusandae. Voluptas, labore asperiores. Vel adipisci, aut perferendis temporibus earum nisi nobis alias consequatur odit voluptas quo unde amet hic.</p>
           </div>
-
         </div>
+
+        {/* ------display related products------ */}
+        <RelatedProduct category={productData.category} subCategory={productData.subCategory}/>
 
       </div>
       
